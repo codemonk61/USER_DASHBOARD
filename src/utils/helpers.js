@@ -1,0 +1,1 @@
+export const keyMirror = (...args) => args.reduce((r, i) => (r[i] = i, r), {});
