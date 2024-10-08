@@ -47,6 +47,7 @@ const SalesChart = () => {
     background: #F7F9FB;
     padding: 24px;
     border-radius: 16px;
+    margi-top: 20px;
   `;
 
   const totalSales = css`

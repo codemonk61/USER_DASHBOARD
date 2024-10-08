@@ -4,6 +4,8 @@ import FunnelSimple from '../atoms/icons/FunnelSimple'
 import ArrowDownUp from '../atoms/icons/ArrowDownUp'
 import SearchInput from '../atoms/SearchInput'
 import { css } from '@emotion/css'
+import ResponsiveDiv from './ResponsiveDiv'
+import Search from '../atoms/icons/Search'
 
 const OrderListHeader = () => {
   return (
@@ -13,7 +15,26 @@ const OrderListHeader = () => {
             <FunnelSimple/>
             <ArrowDownUp/>
         </div>
-        <SearchInput/>
+       <ResponsiveDiv
+         xs={css`display: none`}
+         sm={css`display: none`}
+         md={css`display: none`}
+         xl={css`display: block`}
+         lg={css`display: block`}
+         xxl={css`display: block`}
+       >
+       <SearchInput/>
+       </ResponsiveDiv>
+       <ResponsiveDiv
+        xs={css`display: block`}
+        sm={css`display: block`}
+        md={css`display: none`}
+        xl={css`display: none`}
+        lg={css`display: none`}
+        xxl={css`display: none`}
+       >
+          <Search/>
+       </ResponsiveDiv>
     </div>
   )
 }

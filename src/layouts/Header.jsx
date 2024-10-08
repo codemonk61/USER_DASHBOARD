@@ -53,7 +53,17 @@ const Header = () => {
                     </span>
                 </ResponsiveDiv>
                 <Star />
+                <ResponsiveDiv
+                 xs={css`display: none`}
+                 sm={css`display: none`}
+                 md={css`display: none`}
+                 xl={css`display: block`}
+                 lg={css`display: block`}
+                 xxl={css`display: block`}
+                
+                >
                 <Breadcrumb data={data} />
+                </ResponsiveDiv>
             </div>
             <div className={css`cursor: pointer; display: flex; align-items: center; gap: 12px`}>
                 {/* <SearchInput /> */}

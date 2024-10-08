@@ -12,7 +12,19 @@ import Table from '../atoms/Table'
 import Donut from '../atoms/Donut'
 import RightSidebar from '../layouts/RightSidebar'
 import Header from '../layouts/Header'
+import ResponsiveDiv from '../molecules/ResponsiveDiv'
+import Breadcrumb from '../atoms/Breadcrumb'
 
+const data = [
+    {
+        title: "Dashboards",
+        id: "qwerty1"
+    },
+    {
+        title: "Default",
+        id: "qwerty2"
+    }
+]
 
 const Dashboard = () => {
     const summaryCardData = useSelector(state => state.orderSummaryData)
@@ -21,9 +33,10 @@ const Dashboard = () => {
             <Col xl={18} xs={24} sm={17} lg={18} xxl={18} md={17}>
                 <Header />
                 <main className={css`padding: 20px 28px`}>
+                <ResponsiveDiv className={css`margin-bottom: 20px`}><Breadcrumb data={data} /></ResponsiveDiv>
                     <Text fontStyleGuide="heading2" mb="lg">eCommerce</Text>
                     {/* 1st Row */}
-                    <Row gutter={[8, 0]} justify={'space-between'}>
+                    <Row gutter={[0, 12]} justify={'space-between'}>
                         <Col  xl={11} xs={24} sm={24} lg={11} xxl={11} md={24}>
                             <Row gutter={[0, 12]} justify={'space-between'}>
                                 {
@@ -36,7 +49,7 @@ const Dashboard = () => {
                             </Row>
                         </Col>
                         <Col Col  xl={12} xs={24} sm={24} lg={9} xxl={11} md={24}> 
-                            <div className={css`width: 100%; heiht: 100%;background: #F7F9FB; border-radius: 16px; padding: 24px`}>
+                            <div className={css`background: #F7F9FB; border-radius: 16px; padding: 24px`}>
                                 <BarChart />
                             </div>
 
