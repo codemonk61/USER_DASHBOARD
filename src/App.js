@@ -29,7 +29,7 @@ function App() {
           <Col xl={4} xs={0} sm={0} lg={4} xxl={4} md={0}>
             <LeftSidebar />
           </Col>
-          <Col xl={20} xs={0} sm={12} lg={20} xxl={24} md={24}>
+          <Col xl={20} xs={24} sm={24} lg={20} xxl={20} md={24}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/orderlist" element={<OrderList />} />

@@ -6,11 +6,11 @@ import { useSelector } from 'react-redux'
 import ProjectOverviewTab from '../molecules/ProjectOverviewTab'
 import Text from '../atoms/Text'
 
-const LeftSidebar = () => {
+const LeftSidebar = ({style}) => {
     const dashboardData = useSelector(state => state.dashboards)
     const pageData = useSelector(state => state.pages)
     return (
-        <aside className={css`padding: 20px 16px; border-right: 1px solid #e0e0e0;height: 100vh`}>
+        <aside className={css`padding: 20px 16px; border-right: 1px solid #e0e0e0;height: 100vh;${style}`}>
             <Profile />
             <ProjectOverviewTab />
             <div className={css`margin-top: 35px`}>

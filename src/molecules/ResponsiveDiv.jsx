@@ -1,6 +1,7 @@
 import React from 'react';
-import Breakpointer from '../../atom/layout/Breakpointer';
+import BreakPointers from '../atoms/layout/BreakPointers';
+
 
 
 const Div = ({ RenderAs='div', children, ...props }) => (<RenderAs {...props}>{children}</RenderAs>)
-export default Breakpointer(Div);
+export default BreakPointers(Div);

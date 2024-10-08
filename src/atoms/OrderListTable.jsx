@@ -6,7 +6,6 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
   Checkbox,
   Avatar,
   Box,
@@ -75,7 +74,7 @@ const OrderListTable = () => {
   };
 
   return (
-    <Paper>
+    <>
       <TableContainer>
         <Table>
           <TableHead>
@@ -144,7 +143,7 @@ const OrderListTable = () => {
           <LastPageIcon />
         </IconButton>
       </PaginationContainer>
-    </Paper>
+</>
   );
 };
 

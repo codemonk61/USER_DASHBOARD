@@ -57,7 +57,7 @@ const dashboardsData = [
         icon: "ecommerce",
         children: [
             {
-                id: 103,
+                id: 1025,
                 label: 'Order List',
                 link: "/orderlist",
             },
@@ -129,14 +129,14 @@ const pageData = [
         children: users_profile
     },
     {
-        id: 103,
+        id: 1030,
         label: 'Blog',
         link: LINK,
         icon: "blog",
         children: users_profile
     },
     {
-        id: 103,
+        id: 1035,
         label: 'Social',
         link: LINK,
         icon: "social",

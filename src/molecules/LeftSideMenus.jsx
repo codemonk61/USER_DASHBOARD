@@ -63,10 +63,9 @@ const LeftSideMenu = ({ id, label, icon, link, children }) => {
             <div className={css`display: flex; align-items: center; gap: 8px`}>
                 {isChildren &&<Icon
                     open={open}
-                   
                     isChildren={isChildren}
                 />}
-                {icon && <span className={!isChildren && css`margin-left: 13px`}>{iconMapper[icon]}</span>}
+                {icon && <span className={!isChildren ? css`margin-left: 13px` : ``}>{iconMapper[icon]}</span>}
                 <Text fontStyleGuide="body2" ellipsis='200' mt="xs" mb='xs' weight="400">{label}</Text>
             </div>
             {isChildren && open &&

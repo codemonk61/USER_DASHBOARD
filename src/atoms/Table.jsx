@@ -4,16 +4,13 @@ import { css } from '@emotion/react';
 
 const styles = {
   tableContainer: css`
-
+    overflow-x: auto; /* Enables horizontal scroll */
+    white-space: nowrap; 
     padding: 24px;
     background-color: #F7F9FB;;
     border-radius: 16px;
-
-
-    /* Media query for mobile */
-    @media (max-width: 768px) {
-      padding: 10px;
-    }
+  scrollbar-width: thin; /* for Firefox */
+  scrollbar-color: #888 #e0e0e0; /* for Firefox */
   `,
   tableTitle: css`
     font-size: 16px;
@@ -21,58 +18,20 @@ const styles = {
     margin-bottom: 15px;
   `,
   table: css`
-    width: 100%;
+    width: 500px;
     border-collapse: collapse;
-
-    /* Responsive: On smaller screens, we display as block */
-    @media (max-width: 768px) {
-      display: block;
-    }
   `,
   tableHeader: css`
     text-align: left;
     font-size: 14px;
     color: #888;
     border-bottom: 1px solid #e0e0e0;
-
-    /* Hide the headers on small screens */
-    @media (max-width: 768px) {
-      display: none;
-    }
   `,
   tableRow: css`
     font-size: 14px;
     color: #333;
     border-bottom: 1px solid #e0e0e0;
     height: 50px;
-
-    /* Stack rows on small screens */
-    @media (max-width: 768px) {
-      display: block;
-      margin-bottom: 15px;
-      border-bottom: none;
-      border: 1px solid #e0e0e0;
-      padding: 10px;
-      border-radius: 8px;
-    }
-  `,
-  tableCell: css`
-    padding: 8px 12px;
-
-    /* On mobile, make cells display as block */
-    @media (max-width: 768px) {
-      display: block;
-      padding: 5px 0;
-      text-align: right;
-
-      /* Add labels for mobile */
-      &::before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        color: #555;
-      }
-    }
   `,
 };
 
@@ -91,7 +50,6 @@ const formatCurrency = (value) => {
 const Table = () => {
   return (
     <div css={styles.tableContainer}>
-      <div css={styles.tableTitle}>Top Selling Products</div>
       <table css={styles.table}>
         <thead>
           <tr>

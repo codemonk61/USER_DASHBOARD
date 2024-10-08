@@ -18,46 +18,46 @@ const Dashboard = () => {
     const summaryCardData = useSelector(state => state.orderSummaryData)
     return (
         <Row gutter={0}>
-            <Col xl={19} xs={24} sm={24} lg={19} xxl={19} md={24}>
+            <Col xl={18} xs={24} sm={17} lg={18} xxl={18} md={17}>
                 <Header />
                 <main className={css`padding: 20px 28px`}>
                     <Text fontStyleGuide="heading2" mb="lg">eCommerce</Text>
                     {/* 1st Row */}
-                    <Row gutter={[8, 0]} justify={'space-between'} align={'stretch'}>
-                        <Col span={11}>
+                    <Row gutter={[8, 0]} justify={'space-between'}>
+                        <Col  xl={11} xs={24} sm={24} lg={11} xxl={11} md={24}>
                             <Row gutter={[0, 12]} justify={'space-between'}>
                                 {
-                                    summaryCardData.map((datum) => {
-                                        return <Col span={11}>
+                                    summaryCardData.map((datum, index) => {
+                                        return <Col  xl={11} xs={24} sm={11} lg={11} xxl={11} md={11} key={index}>
                                             <SummaryCard {...datum} key={datum.title} />
                                         </Col>
                                     })
                                 }
                             </Row>
                         </Col>
-                        <Col span={12} >
-                            <div className={css`background: #F7F9FB; border-radius: 16px; padding: 24px`}>
+                        <Col Col  xl={12} xs={24} sm={24} lg={9} xxl={11} md={24}> 
+                            <div className={css`width: 100%; heiht: 100%;background: #F7F9FB; border-radius: 16px; padding: 24px`}>
                                 <BarChart />
                             </div>
 
                         </Col>
 
-                        <Col span={14}>
+                        <Col xl={11} xs={24} sm={24} lg={11} xxl={11} md={12}>
                             <LineChart />
                         </Col>
-                        <Col span={9}>
+                        <Col   xl={11} xs={24} sm={24} lg={11} xxl={11} md={12}>
                             <RevenueByLocation />
                         </Col>
-                        <Col span={14}>
+                        <Col xl={11} xs={24} sm={24} lg={9} xxl={11} md={12}>
                             <Table />
                         </Col>
-                        <Col span={9}>
+                        <Col  xl={11} xs={24} sm={24} lg={9} xxl={11} md={12}>
                             <Donut />
                         </Col>
                     </Row>
                 </main>
             </Col>
-            <Col xl={4} xs={24} sm={24} lg={4} xxl={4} md={24}>
+            <Col xl={4} xs={24} sm={4} lg={4} xxl={4} md={4}>
                 <RightSidebar />
             </Col>
         </Row>
